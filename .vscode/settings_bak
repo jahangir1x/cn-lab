@@ -1,0 +1,209 @@
+{
+  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0 }",
+  "code-runner.runInTerminal": true,
+  "code-runner.saveAllFilesBeforeRun": true,
+  "code-runner.saveFileBeforeRun": true,
+  "cph.general.autoShowJudge": false,
+  "cph.general.firstTime": false,
+  "debug.onTaskErrors": "showErrors",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.cursorBlinking": "solid",
+  "editor.cursorSurroundingLines": 8,
+  "editor.cursorWidth": 5,
+  "editor.experimental.pasteActions.enabled": true,
+  "editor.fontFamily": "'FiraCode Nerd Font', 'Consolas', 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 16,
+  "editor.fontWeight": "400",
+  "editor.formatOnType": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.inlineSuggest.enabled": true,
+  "editor.largeFileOptimizations": false,
+  "editor.linkedEditing": true,
+  "editor.multiCursorModifier": "ctrlCmd", // Maps to Control on Windows and Linux and to Command on macOS.
+  "editor.stickyScroll.enabled": true,
+  "editor.suggest.matchOnWordStartOnly": false,
+  "editor.suggestSelection": "first",
+  "editor.unicodeHighlight.ambiguousCharacters": true,
+  "editor.unicodeHighlight.invisibleCharacters": true,
+  "editor.useCustomCodeActionMenu": true,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "extensions.autoUpdate": false,
+  "files.autoSave": "onFocusChange",
+  "files.autoSaveDelay": 500,
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.factorypath": true,
+    "**/.project": true,
+    "**/.settings": true
+  },
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": false,
+    "c": true,
+  },
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.over": "line",
+  // html configs
+  "html.suggest.html5": true,
+  "html.validate.scripts": true,
+  "html.validate.styles": true,
+  "ipynb.experimental.pasteImages.enabled": true,
+  "leetcode.hint.commandShortcut": false,
+  "leetcode.hint.commentDescription": false,
+  "leetcode.hint.configWebviewMarkdown": false,
+  "leetcode.workspaceFolder": "/home/zinis/playground/CP",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "notebook.lineNumbers": "on",
+  "omnisharp.enableEditorConfigSupport": false,
+  "omnisharp.organizeImportsOnFormat": true,
+  // c# javascript like styling requires $home/.omnisharp
+  "omnisharp.useModernNet": false,
+  "settings.cycle": [
+    {
+      "id": "copilot",
+      "overrideWorkspaceSettings": true,
+      "values": [
+        {
+          "github.copilot.editor.enableAutoCompletions": false
+        },
+        {
+          "github.copilot.editor.enableAutoCompletions": true
+        }
+      ]
+    }
+  ],
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.scrollback": 5000,
+  "terminal.integrated.tabs.enabled": false,
+  "terminal.integrated.tabs.location": "left",
+  "update.enableWindowsBackgroundUpdates": false,
+  "vim.startInInsertMode": true,
+  "vim.easymotion": true,
+  "vim.sneak": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.handleKeys": {
+    "<C-f>": true,
+    "<C-x>": false,
+    "<C-c>": false,
+    "<C-v>": false,
+    "<C-w>": false,
+    "<C-t>": false,
+    "<C-[>": false,
+    "<C-]>": false
+  },
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>", "l"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["J"],
+      "after": ["5", "j"]
+    },
+    {
+      "before": ["K"],
+      "after": ["5", "k"]
+    },
+    {
+      "before": ["<leader>", "/"],
+      "commands": [":nohl"]
+    }
+  ],
+  "vim.leader": "<Space>",
+  "C_Cpp.default.cppStandard": "c++14",
+  "C_Cpp.files.exclude": {
+    "**/.vs": true,
+    "**/.vscode": true,
+    "ignore": true
+  },
+  "C_Cpp.intelliSenseUpdateDelay": 500,
+  "code-runner.ignoreSelection": true,
+  "cph.general.menuChoices": "cpp python java",
+  "cph.language.cpp.SubmissionCompiler": "GNU G++14 6.4.0",
+  "editor.accessibilitySupport": "off",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "liveServer.settings.donotVerifyTags": true,
+  "python.languageServer": "Pylance",
+  "terminal.integrated.smoothScrolling": true,
+  "workbench.sideBar.location": "right",
+  "workbench.iconTheme": "vscode-icons",
+  "editor.minimap.enabled": false,
+  "editor.rulers": [80],
+  "workbench.colorCustomizations": {
+    "editorRuler.foreground": "#ff4b81be"
+  },
+  "editor.lineNumbers": "relative",
+  "leetcode.hint.setDefaultLanguage": false,
+  "editor.wordWrap": "on",
+  "redhat.telemetry.enabled": true,
+  "liveServer.settings.host": "0.0.0.0",
+  "security.workspace.trust.untrustedFiles": "open",
+  "cmake.options.statusBarVisibility": "visible",
+  "qt-official.qtFolder": "/home/zinis/Qt",
+  "cmake.pinnedCommands": [
+    "workbench.action.tasks.configureTaskRunner",
+    "workbench.action.tasks.runTask"
+  ],
+
+  "workbench.colorTheme": "Panda Syntax",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "editor.tabSize": 4,
+  // "prettier.requireConfig": true
+  "[html]": {
+    "editor.tabSize": 2
+  },
+  "[javascript]": {
+    "editor.tabSize": 2
+  },
+  "[css]": {
+    "editor.tabSize": 2
+  },
+  "[scss]": {
+    "editor.tabSize": 2
+  },
+  "[json]": {
+    "editor.tabSize": 2
+  },
+  "[typescript]": {
+    "editor.tabSize": 2
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "arduino.useArduinoCli": true,
+  "go.toolsManagement.autoUpdate": true,
+  "window.titleBarStyle": "custom",
+  "prettier.requireConfig": true,
+  "dotnet.codeLens.enableReferencesCodeLens": false,
+  "vstuc.refreshOnSave": true,
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "git.ignoreRebaseWarning": true,
+  "notebook.defaultFormatter": "ms-python.black-formatter",
+  "notebook.formatOnCellExecution": true,
+  "notebook.formatOnSave.enabled": true,
+  "[java]": {
+    "editor.defaultFormatter": "Oracle.oracle-java"
+  },
+  "java.jdt.ls.vmargs": "-Xlog:jni+resolve=off",
+  "github.copilot.editor.enableAutoCompletions": true,
+}

@@ -1,0 +1,5 @@
+Forced guest:
+Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters\AllowInsecureGuestAuth
+
+Openssl raw:
+openssl s_client -connect smtp.gmail.com:465 -crlf -quiet

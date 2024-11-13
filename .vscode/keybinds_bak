@@ -1,0 +1,341 @@
+[
+    // find in files
+    {
+        "key": "ctrl+k alt+f",
+        "command": "workbench.action.findInFiles"
+    },
+    // create new file
+    {
+        "key": "ctrl+alt+n",
+        "command": "workbench.action.files.newUntitledFile",
+        "when": "!explorerViewletVisible"
+    },
+    {
+        "key": "ctrl+alt+n",
+        "command": "explorer.newFile",
+        "when": "explorerViewletVisible"
+    },
+    // toggle breakpoint
+    {
+        "key": "f9",
+        "command": "-editor.debug.action.toggleBreakpoint",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "f9",
+        "command": "-editor.debug.action.toggleBreakpoint",
+        "when": "debuggersAvailable && editorTextFocus"
+    },
+    {
+        "key": "f4",
+        "command": "editor.debug.action.toggleBreakpoint",
+        "when": "debuggersAvailable && editorTextFocus"
+    },
+    // run and stop with code runner
+    {
+        "key": "f9",
+        "command": "extension.multiCommand.execute",
+        "args": {
+            "sequence": [
+                "workbench.action.terminal.focus",
+                "code-runner.run"
+            ]
+        }
+    },
+    {
+        "key": "ctrl+alt+n",
+        "command": "-code-runner.run"
+    },
+    {
+        "key": "shift+f9",
+        "command": "code-runner.stop"
+    },
+    {
+        "key": "ctrl+alt+m",
+        "command": "-code-runner.stop"
+    },
+    // toggle activity bar
+    {
+        "key": "ctrl+alt+a",
+        "command": "workbench.action.toggleActivityBarVisibility"
+    },
+    // copy lines down (won't need it I guess)
+    {
+        "key": "ctrl+shift+l",
+        "command": "editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "-selectAllSearchEditorMatches",
+        "when": "inSearchEditor"
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "-editor.action.selectHighlights",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "-addCursorsAtSearchResults",
+        "when": "fileMatchOrMatchFocus && searchViewletVisible"
+    },
+    // terminal resizing
+    {
+        "key": "shift+alt+u",
+        "command": "workbench.action.terminal.resizePaneUp"
+    },
+    {
+        "key": "shift+alt+d",
+        "command": "workbench.action.terminal.resizePaneDown"
+    },
+    // shrink and grow selection
+    {
+        "key": "ctrl+shift+p",
+        "command": "editor.action.smartSelect.shrink",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+n",
+        "command": "editor.action.smartSelect.expand",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+n",
+        "command": "-workbench.action.newWindow"
+    },
+    {
+        "key": "ctrl+shift+p",
+        "command": "-workbench.action.showCommands"
+    },
+    // open control panel
+    {
+        "key": "ctrl+k ctrl+p",
+        "command": "-workbench.action.showAllEditors"
+    },
+    {
+        "key": "ctrl+k ctrl+p",
+        "command": "workbench.action.showCommands"
+    },
+    // expand line selection down (won't need it I guess)
+    {
+        "key": "ctrl+l",
+        "command": "expandLineSelection",
+        "when": "textInputFocus"
+    },
+    // find and replace panel
+    {
+        "key": "ctrl+r",
+        "command": "editor.action.startFindReplaceAction",
+        "when": "editorFocus || editorIsOpen"
+    },
+    // escape to escape
+    {
+        "key": "Escape",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "Escape",
+        "command": "extension.multiCommand.execute",
+        "args": {
+            "sequence": [
+                "workbench.action.terminal.toggleTerminal",
+                "workbench.action.terminal.toggleTerminal"
+            ]
+        },
+        "when": "terminalViewShowing && !terminalFocus"
+    },
+    // toggle sidebar visibility
+    {
+        "key": "alt+a",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    // leetcode tester configs
+    {
+        "key": "ctrl+f9",
+        "command": "leetcode.testSolution"
+    },
+    {
+        "key": "ctrl+f10",
+        "command": "leetcode.submitSolution"
+    },
+    // soft wrap
+    {
+        "key": "alt+z",
+        "command": "-editor.action.toggleWordWrap"
+    },
+    {
+        "key": "alt+z",
+        "command": "editor.action.toggleWordWrap"
+    },
+    // cph run
+    {
+        "key": "ctrl+alt+b",
+        "command": "-cph.runTestCases"
+    },
+    // cph focus
+    {
+        "key": "ctrl+shift+c",
+        "command": "-workbench.action.terminal.openNativeConsole",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+c",
+        "command": "workbench.view.extension.cph-judge-view-container",
+        "when": "!terminalFocus"
+    },
+    // notebook run
+    {
+        "key": "ctrl+alt+n",
+        "command": "notebook.execute",
+        "when": "notebookCellListFocused && notebookMissingKernelExtension && !notebookCellExecuting && notebookCellType == 'code' || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelCount > 0 || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelSourceCount > 0"
+    },
+    // toggle copilot
+    {
+        "key": "ctrl+alt+c",
+        "command": "settings.cycle.copilot",
+        "when": "editorFocus"
+    },
+    // home with vim
+    {
+        "key": "ctrl+a",
+        "command": "cursorHome",
+        "when": "textInputFocus && vim.mode == 'Insert'"
+    },
+    // end with vim
+    {
+        "key": "ctrl+e",
+        "command": "cursorEnd",
+        "when": "textInputFocus && vim.mode == 'Insert'"
+    },
+    // forward one char with vim
+    {
+        "key": "ctrl+f",
+        "command": "cursorRight",
+        "when": "textInputFocus && vim.mode == 'Insert'"
+    },
+    // backward one char with vim
+    {
+        "key": "ctrl+b",
+        "command": "cursorLeft",
+        "when": "textInputFocus && vim.mode == 'Insert'"
+    },
+    // go up with vim
+    {
+        "key": "ctrl+p",
+        "command": "cursorUp",
+        "when": "textInputFocus && vim.mode == 'Insert'"
+    },
+    // go down with vim
+    {
+        "key": "ctrl+n",
+        "command": "cursorDown",
+        "when": "textInputFocus && vim.mode == 'Insert'"
+    },
+    // delete forward char with vim
+    {
+        "key": "ctrl+d",
+        "command": "deleteRight",
+        "when": "textInputFocus && vim.mode == 'Insert'"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+shift+f",
+        "command": "workbench.action.terminal.focusFind",
+        "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "-workbench.action.terminal.focusFind",
+        "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+alt+down",
+        "command": "editor.action.insertCursorBelow",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+down",
+        "command": "-editor.action.insertCursorBelow",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+up",
+        "command": "editor.action.insertCursorAbove",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+up",
+        "command": "-editor.action.insertCursorAbove",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+w",
+        "command": "workbench.action.closeOtherEditors"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "editor.action.inlineSuggest.acceptNextWord",
+        "when": "inlineSuggestionVisible && !editorReadonly"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+alt+f",
+        "command": "actions.find",
+        "when": "editorFocus || editorIsOpen"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "-actions.find",
+        "when": "editorFocus || editorIsOpen"
+    },
+    {
+        "key": "ctrl+alt+f",
+        "command": "list.find",
+        "when": "listFocus && listSupportsFind"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "-list.find",
+        "when": "listFocus && listSupportsFind"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "-editor.action.startFindReplaceAction",
+        "when": "editorFocus || editorIsOpen"
+    },
+    {
+        "key": "ctrl+shift+a",
+        "command": "editor.action.selectAll"
+    },
+    {
+        "key": "ctrl+a",
+        "command": "-editor.action.selectAll"
+    },
+    {
+        "key": "ctrl+shift+a",
+        "command": "list.selectAll",
+        "when": "listFocus && listSupportsMultiselect && !inputFocus && !treestickyScrollFocused"
+    },
+    {
+        "key": "ctrl+a",
+        "command": "-list.selectAll",
+        "when": "listFocus && listSupportsMultiselect && !inputFocus && !treestickyScrollFocused"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-github.copilot.generate",
+        "when": "editorTextFocus && github.copilot.activated && !commentEditorFocused && !inInteractiveInput && !interactiveEditorFocused"
+    },
+]
