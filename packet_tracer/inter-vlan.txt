@@ -1,0 +1,137 @@
+switch1.............
+
+Switch>enable
+Switch#configure terminal 
+Switch(config)#interface fastEthernet 0/1
+Switch(config-if)#switchport mode access 
+Switch(config-if)#switchport access vlan 10
+Switch(config-if)#no shutdown
+Switch(config-if)#exit
+
+Switch(config)#interface fastEthernet 0/2
+Switch(config-if)#switchport mode access 
+Switch(config-if)#switchport access vlan 20
+Switch(config-if)#no shutdown
+Switch(config-if)#exit
+
+Switch(config)#interface fastEthernet 0/3
+Switch(config-if)#switchport mode access 
+Switch(config-if)#switchport access vlan 30
+Switch(config-if)#no shutdown
+Switch(config-if)#exit
+
+Switch(config)#interface fastEthernet 0/4
+Switch(config-if)#switchport mode trunk 
+Switch(config-if)#no shutdown
+Switch(config-if)#do write memory
+Building configuration...
+[OK]
+Switch(config-if)#
+
+
+
+
+
+
+switch2......
+
+Switch>enable
+Switch#configure terminal 
+Switch(config)#interface fastEthernet 0/1
+Switch(config-if)#switchport mode access 
+Switch(config-if)#switchport access vlan 10
+Switch(config-if)#no shutdown
+Switch(config-if)#exit
+
+Switch(config)#interface fastEthernet 0/2
+Switch(config-if)#switchport mode access 
+Switch(config-if)#switchport access vlan 20
+Switch(config-if)#no shutdown
+Switch(config-if)#exit
+
+Switch(config)#interface fastEthernet 0/3
+Switch(config-if)#switchport mode access 
+Switch(config-if)#switchport access vlan 30
+Switch(config-if)#no shutdown
+Switch(config-if)#exit
+
+Switch(config)#interface fastEthernet 0/6
+Switch(config-if)#switchport mode access 
+Switch(config-if)#switchport access vlan 10
+Switch(config-if)#no shutdown
+Switch(config-if)#exit
+
+Switch(config)#interface fastEthernet 0/7
+Switch(config-if)#switchport mode access 
+Switch(config-if)#switchport access vlan 20
+Switch(config-if)#no shutdown
+Switch(config-if)#exit 
+
+Switch(config)#interface fastEthernet 0/8
+Switch(config-if)#switchport mode access 
+Switch(config-if)#switchport access vlan 30
+Switch(config-if)#no shutdown
+Switch(config-if)#exit 
+Switch(config-if)#do write memory
+Building configuration...
+[OK]
+Switch(config-if)#
+
+
+switch3.....
+
+Switch>enable
+Switch#configure terminal 
+Switch(config)#interface fastEthernet 0/1
+Switch(config-if)#switchport mode access 
+Switch(config-if)#switchport access vlan 10
+Switch(config-if)#no shutdown
+Switch(config-if)#exit
+
+Switch(config)#interface fastEthernet 0/2
+Switch(config-if)#switchport mode access 
+Switch(config-if)#switchport access vlan 20
+Switch(config-if)#no shutdown
+Switch(config-if)#exit
+
+Switch(config)#interface fastEthernet 0/3
+Switch(config-if)#switchport mode access 
+Switch(config-if)#switchport access vlan 30
+Switch(config-if)#no shutdown
+Switch(config-if)#exit
+Switch(config)#do write memory
+Building configuration...
+[OK]
+Switch(config)#
+
+
+
+router.....
+
+Router>enable
+Router#configure terminal 
+Router(config)#interface gigabitEthernet 0/0
+Router(config-if)#ip address 192.168.10.1 255.255.255.0
+Router(config-if)#no shutdown 
+Router(config-if)#exit
+
+Router(config)#interface gigabitEthernet 0/1
+Router(config-if)#ip address 192.168.20.1 255.255.255.0
+Router(config-if)#no shutdown 
+Router(config-if)#exit
+
+Router(config)#interface gigabitEthernet 0/2
+Router(config-if)#ip address 192.168.30.1 255.255.255.0
+Router(config-if)#no shutdown 
+Router(config-if)#exit
+
+Router(config)#router rip
+Router(config-router)#network 192.168.10.0
+Router(config-router)#network 192.168.20.0
+Router(config-router)#network 192.168.30.0
+Switch(config-if)#no shutdown
+Router(config-router)#do write memory
+Building configuration...
+[OK]
+Router(config-router)#
+Router#

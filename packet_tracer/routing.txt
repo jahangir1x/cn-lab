@@ -1,0 +1,74 @@
+Router0.........
+
+Router>enable
+Router#configure terminal 
+Router(config)#interface gigabitEthernet 0/0
+Router(config-if)#ip address 192.168.10.1 255.255.255.0
+Router(config-if)#no shutdown 
+Router(config-if)#exit
+
+Router(config)#interface gigabitEthernet 0/1
+Router(config-if)#ip address 10.0.0.1 255.0.0.0
+Router(config-if)#no shutdown 
+Router(config-if)#exit
+
+Router(config)#do write memory
+
+Router(config)#router rip
+Router(config-router)#network 192.168.10.0
+Router(config-router)#network 10.0.0.0
+Router(config-router)#do write memory
+Router(config-router)#exit
+
+
+
+Router1.........
+
+Router>enable
+Router#configure terminal 
+Router(config)#interface gigabitEthernet 0/0
+Router(config-if)#ip address 192.168.20.1 255.255.255.0
+Router(config-if)#no shutdown 
+Router(config-if)#exit
+
+Router(config)#interface gigabitEthernet 0/1
+Router(config-if)#ip address 10.0.0.2 255.0.0.0
+Router(config-if)#no shutdown 
+Router(config-if)#exit
+
+Router(config)#interface gigabitEthernet 0/2
+Router(config-if)#ip address 11.0.0.2 255.0.0.0
+Router(config-if)#no shutdown 
+Router(config-if)#exit
+
+Router(config)#do write memory
+
+Router(config)#router rip
+Router(config-router)#network 10.0.0.0
+Router(config-router)#network 11.0.0.0
+Router(config-router)#network 192.168.20.0
+Router(config-router)#do write memory
+Router(config-router)#exit
+
+
+Router2.........
+
+Router>enable 
+Router#configure terminal 
+Router(config)#interface gigabitEthernet 0/0
+Router(config-if)#ip address 192.168.30.1 255.255.255.0
+Router(config-if)#no shutdown 
+Router(config-if)#exit
+
+Router(config)#interface gigabitEthernet 0/2
+Router(config-if)#ip address 11.0.0.1 255.255.255.0
+Router(config-if)#no shutdown 
+Router(config-if)#exit
+
+Router(config)#do write memory
+
+Router(config)#router rip
+Router(config-router)#network 192.168.30.0
+Router(config-router)#network 11.0.0.0
+Router(config-router)#do write memory
+Router(config-router)#exit
